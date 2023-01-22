@@ -17,22 +17,14 @@ let db = firebase.database();
 
 function moneyread(){
     let localuser = localStorage.getItem("user");
-    if(localuser == 1){
+
         const bal = db.ref("balance/");
         bal.on("value", function(snapshot) {
-            var userbal = snapshot.child(1).val();
+            var userbal = snapshot.child(localuser).val();
             document.getElementById("name").innerHTML += userbal.user;
             document.getElementById("money").innerHTML += userbal.balance;
         });
-    }
-    if(localuser == 2){
-
-        bal.on("value", function(snapshot) {
-            var userbal = snapshot.child(2).val();
-            document.getElementById("name").innerHTML += userbal.user;
-            document.getElementById("money").innerHTML += userbal.balance;
-        });
-    }
+    
 }
 
 function submitwish(){

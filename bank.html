@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bank</title>
+	<!-- STYLESHEET -->
+	<link rel="stylesheet" href="bankstyle.css">
+</head>
+<body onload="moneyread()">
+
+	<div class="header">
+		<h1>My wallets</h1>
+	</div>
+	<img class="imgcard" src="https://cdn-icons-png.flaticon.com/512/3176/3176316.png" alt="">
+	<h1 style="margin-bottom: 23px; text-align: center;">Hello <span id="name"></span></h1>
+	<div class="balance-wrapper">
+		<h3>TOTAL BALANCE</h3>
+		<h1 id="money"> </h1>
+	</div>
+
+
+</div>
+
+
+<div class="divinput">
+  <form>
+    <label for="fname">Text</label>
+    <input style="color: black;" type="text" id="wish" name="firstname" placeholder="Your Wish">
+
+    <label for="country">Balance</label>
+    <select style="color: black;" id="btcmoney" name="money">
+      <option style="color: black;" value="50">50</option>
+      <option style="color: black;" value="100">100</option>
+      <option style="color: black;" value="200">200</option>
+	  <option style="color: black;" value="300">300</option>
+	  <option style="color: black;" value="500">500</option>
+	  <option style="color: black;" value="1000">1000</option>
+	  <option style="color: black;" value="2000">2000</option>
+	  <option style="color: black;" value="5000">5000</option>
+	  <option style="color: black;" value="7500">7500</option>
+	  <option style="color: black;" value="10000">10000</option>
+	  <option style="color: black;" value="150000">15000</option>
+    </select>
+  
+    <input onclick="submitwish()" type="submit" value="Submit">
+  </form>
+</div>
+
+<footer></footer>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+	<script src="bank.js"></script>
+</body>
+</html>
